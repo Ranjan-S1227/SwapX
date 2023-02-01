@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "swapX": {
+      "main": "src/swapX/main.mo",
+      "type": "motoko"
+    },
+    "swapX_assets": {
+      "dependencies": [
+        "swapX"
+      ],
+      "frontend": {
+        "entrypoint": "src/swapX_assets/src/index.html"
+      },
+      "source": [
+        "src/swapX_assets/assets",
+        "dist/swapX_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
